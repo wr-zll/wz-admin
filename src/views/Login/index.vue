@@ -4,7 +4,6 @@
            <ul class="menu-table">
                <li :class="{'current':item.current}" v-for="item in menuTab" :key="item.id" @click="toggleMenu(item)">{{item.txt}}</li>
            </ul>
-
            <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" class="login-form" size=medium >
                 <el-form-item  prop="pass" class="itme-form">
                     <label class="aa">用户名</label>
@@ -149,7 +148,8 @@ export default {
           border-radius: 2px;
           cursor: pointer;
       }
-      .current{
+  }
+  .current{
           background-color: rgba(0, 0, 0, 1);
       }
       .login-form{
@@ -163,11 +163,13 @@ export default {
       }
        
       .itme-form{
-          margin-bottom: 13px;
+          margin-bottom: 20px;
       }
       .blocks{
           display: block;
           width: 100%;
       }
-  }
+    .login-warp{
+     padding-top: 150px;
+    }
 </style>
